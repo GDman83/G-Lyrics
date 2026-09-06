@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>G-Lyrics - 自動 LRC 歌詞生成器</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- 載入 WaveSurfer.js CDN -->
+  <script src="https://unpkg.com/wavesurfer.js@7"></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>G-Lyrics 歌詞生成與對時工具</h1>
+    </header>
+
+    <!-- 檔案上傳區 -->
+    <section class="upload-section">
+      <input type="file" id="audio-input" accept="audio/*" />
+      <button id="process-btn" disabled>傳送至 AI 分析</button>
+    </section>
+
+    <!-- 波形與播放控制 -->
+    <section class="waveform-section">
+      <div id="waveform"></div>
+      <div class="controls">
+        <button id="play-btn" disabled>播放 / 暫停</button>
+        <span id="time-display">00:00.00 / 00:00.00</span>
+      </div>
+    </section>
+
+    <!-- 歌詞編輯與預覽區 -->
+    <section class="lyrics-section">
+      <h3>歌詞對時編輯區</h3>
+      <div id="lyrics-container">
+        <p class="placeholder">請上傳音訊檔案並進行分析...</p>
+      </div>
+      <button id="download-btn" disabled>下載 .lrc 檔案</button>
+    </section>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
